@@ -1,14 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   return (
-    <nav className="flex justify-center items-center p-8">
-      <div className="flex space-x-6">
-        <button className="bg-zinc-900 px-4 py-2 rounded-xl">Strona Główna</button>
-        <button className="bg-zinc-900 px-4 py-2 rounded-xl">Osiągnięcia</button>
-        <button className="bg-zinc-900 px-4 py-2 rounded-xl">Zawodnicy</button>
-        <button className="bg-zinc-900 px-4 py-2 rounded-xl">Kontakt</button>
-        <button className="bg-sky-400 text-black px-6 py-2 rounded-full">Zaloguj się</button>
+    <nav className="flex justify-between items-center fixed w-full p-10">
+      <a href='https://www.youtube.com/@T34P07'>
+        <img className='h-12' src='../src/assets/vectors/T34P07.png' alt="T34P07" />
+      </a>
+      
+      <div className="flex space-x-4">
+        <Link to="/" className="bg-transparent px-4 py-2">Strona Główna</Link>
+        <Link to="/achievements" className="bg-transparent px-4 py-2">Osiągnięcia</Link>
+        <Link to="/home" className="bg-transparent px-4 py-2">Członkowie</Link>
+        <Link to="/passes" className="bg-transparent px-4 py-2">Karnety</Link>
+        <Link to="/contact" className="bg-transparent px-4 py-2">Kontakt</Link>
       </div>
     </nav>
   );
